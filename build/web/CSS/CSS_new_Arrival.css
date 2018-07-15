@@ -1,0 +1,114 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 28, 2018, 3:20:20 PM
+    Author     : hieu bach
+*/
+@import url('https://fonts.googleapis.com/css?family=Alegreya:700|Open+Sans|Oswald|Roboto:900');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Montserrat');
+
+
+
+
+
+
+.NewArrival h2{
+    padding: 20px;
+    width: 100%;
+    text-align: center;  
+    font-family: Montserrat;
+}
+
+.NewArrival td{
+     padding-left: 33px;
+     padding-top: 10px;
+}
+
+.NewArrival {
+    padding-top: 25px;
+}
+
+
+.NewArrival img{
+    width: 230px;
+    height: 250px; 
+}
+
+
+/** {box-sizing: border-box}*/
+.mySlides {
+    display: none;
+    padding-bottom: 50px;
+}
+
+
+/* Slideshow container */
+.slideshow-container {
+  /*max-width: 1000px;*/
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: gray;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+.prev a:hover{
+    text-decoration: none;
+}
+
+.next a:hover{
+    text-decoration: none;
+}
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1000s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: 1} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: 1} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+

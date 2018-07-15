@@ -1,0 +1,39 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 28, 2018, 3:19:00 PM
+    Author     : hieu bach
+*/
+@import url('https://fonts.googleapis.com/css?family=Alegreya:700|Open+Sans|Oswald|Roboto:900');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Montserrat');
+.cataloge{
+    padding-top: 50px;
+}
+
+.cataloge div{
+     padding: 120px;
+     background-position: center;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.cataloge h4{
+    font-size: 35px;
+    color: white;
+    font-family: Montserrat;
+}
+
+
+#cata:hover{
+    opacity: 0.7;
+}
+
+.cataloge td{
+    padding-left: 20px;
+    
+}
+
