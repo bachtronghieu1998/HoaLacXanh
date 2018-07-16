@@ -11,44 +11,6 @@
         </file>
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/Users/ADMIN/Downloads/HoaLacXanh-master/HoaLacXanh-master/src/java/adminBean/TypeProduct.java</file>
-            <file>file:/C:/Users/ADMIN/Downloads/HoaLacXanh-master/HoaLacXanh-master/web/WEB-INF/web.xml</file>
-            <file>file:/C:/Users/ADMIN/Downloads/HoaLacXanh-master/HoaLacXanh-master/src/java/bean/BeanBlog.java</file>
-            <file>file:/C:/Users/ADMIN/Downloads/HoaLacXanh-master/HoaLacXanh-master/src/java/UsController/UProdController.java</file>
-            <file>file:/C:/Users/ADMIN/Downloads/HoaLacXanh-master/HoaLacXanh-master/web/Admin/AdminBlog.jsp</file>
-            <file>file:/C:/Users/ADMIN/Downloads/HoaLacXanh-master/HoaLacXanh-master/src/java/bean/BeanBlogDetail.java</file>
-            <file>file:/C:/Users/ADMIN/Downloads/HoaLacXanh-master/HoaLacXanh-master/web/Admin/UpdateProduct.jsp</file>
-            <file>file:/C:/Users/ADMIN/Downloads/HoaLacXanh-master/HoaLacXanh-master/src/java/adminBean/ProductBean.java</file>
-            <file>file:/C:/Users/ADMIN/Downloads/HoaLacXanh-master/HoaLacXanh-master/web/Admin/UpdateOrder.jsp</file>
-            <file>file:/C:/Users/ADMIN/Downloads/HoaLacXanh-master/HoaLacXanh-master/src/java/AdminBlogBean/BlogBean.java</file>
-            <file>file:/C:/Users/ADMIN/Downloads/HoaLacXanh-master/HoaLacXanh-master/web/Admin/UpdateBlog.jsp</file>
-            <file>file:/C:/Users/ADMIN/Downloads/HoaLacXanh-master/HoaLacXanh-master/web/Admin/SideNav.html</file>
-            <file>file:/C:/Users/ADMIN/Downloads/HoaLacXanh-master/HoaLacXanh-master/web/Elements/Cataloge.jsp</file>
-            <file>file:/C:/Users/ADMIN/Downloads/HoaLacXanh-master/HoaLacXanh-master/web/Elements/BlogDetail.jsp</file>
-            <file>file:/C:/Users/ADMIN/Downloads/HoaLacXanh-master/HoaLacXanh-master/web/Elements/Blog.jsp</file>
-            <file>file:/C:/Users/ADMIN/Downloads/HoaLacXanh-master/HoaLacXanh-master/src/java/dal/BlogDAO.java</file>
-            <file>file:/C:/Users/ADMIN/Downloads/HoaLacXanh-master/HoaLacXanh-master/web/CSS/Admin.css</file>
-            <file>file:/C:/Users/ADMIN/Downloads/HoaLacXanh-master/HoaLacXanh-master/web/Admin/InsertProduct.jsp</file>
-            <file>file:/C:/Users/ADMIN/Downloads/HoaLacXanh-master/HoaLacXanh-master/src/java/AdController/ProductController.java</file>
-            <file>file:/C:/Users/ADMIN/Downloads/HoaLacXanh-master/HoaLacXanh-master/web/Elements/Cataloge.html</file>
-            <file>file:/C:/Users/ADMIN/Downloads/HoaLacXanh-master/HoaLacXanh-master/src/java/adminBean/AdminBean.java</file>
-            <file>file:/C:/Users/ADMIN/Downloads/HoaLacXanh-master/HoaLacXanh-master/web/Admin/InsertBlog.jsp</file>
-            <file>file:/C:/Users/ADMIN/Downloads/HoaLacXanh-master/HoaLacXanh-master/src/java/AdminFunction/AdCheck.java</file>
-            <file>file:/C:/Users/ADMIN/Downloads/HoaLacXanh-master/HoaLacXanh-master/src/java/AdminBlogServlet/BlogInsert.java</file>
-            <file>file:/C:/Users/ADMIN/Downloads/HoaLacXanh-master/HoaLacXanh-master/src/java/Paging/NewArrivalPaging.java</file>
-            <file>file:/C:/Users/ADMIN/Downloads/HoaLacXanh-master/HoaLacXanh-master/src/java/AdminBlogServlet/BlogDelete.java</file>
-            <file>file:/C:/Users/ADMIN/Downloads/HoaLacXanh-master/HoaLacXanh-master/web/Elements/ProductDetail.jsp</file>
-            <file>file:/C:/Users/ADMIN/Downloads/HoaLacXanh-master/HoaLacXanh-master/web/CSS/Blog.css</file>
-            <file>file:/C:/Users/ADMIN/Downloads/HoaLacXanh-master/HoaLacXanh-master/src/java/userBean/ProductBean.java</file>
-            <file>file:/C:/Users/ADMIN/Downloads/HoaLacXanh-master/HoaLacXanh-master/web/Admin/AdminOrder.jsp</file>
-            <file>file:/C:/Users/ADMIN/Downloads/HoaLacXanh-master/HoaLacXanh-master/src/java/com/context/DBContext.java</file>
-            <file>file:/C:/Users/ADMIN/Downloads/HoaLacXanh-master/HoaLacXanh-master/web/Admin/Admin_Add_New_Admin.jsp</file>
-            <file>file:/C:/Users/ADMIN/Downloads/HoaLacXanh-master/HoaLacXanh-master/web/Admin/AdminOrderItem.jsp</file>
-            <file>file:/C:/Users/ADMIN/Downloads/HoaLacXanh-master/HoaLacXanh-master/web/Admin/AdminSanPham.jsp</file>
-            <file>file:/C:/Users/ADMIN/Downloads/HoaLacXanh-master/HoaLacXanh-master/src/java/AdminBlogServlet/BlogUpdate.java</file>
-            <file>file:/C:/Users/ADMIN/Downloads/HoaLacXanh-master/HoaLacXanh-master/web/Admin/AdminLogin.jsp</file>
-            <file>file:/C:/Users/ADMIN/Downloads/HoaLacXanh-master/HoaLacXanh-master/src/java/AdController/AdminAddController.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

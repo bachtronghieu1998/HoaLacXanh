@@ -36,7 +36,9 @@
         <c:forEach var="b" items="${blog.selectByID()}">
                 <div class="blog_detail" style="border: 1px solid #cccccc">
                     <p style="float: right">Date: ${b.time}</p>
-                    <h1> ${b.name}</h1>                    
+                    
+                    <h1> ${b.name}</h1> 
+                    <p><img src="../images/${b.image}"/></p>
                     <p>   
                         ${b.content}
                     </p>        

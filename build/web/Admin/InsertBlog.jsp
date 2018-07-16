@@ -4,7 +4,7 @@
     Author     : hieu bach
 --%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
+<%@ taglib prefix='mt' uri="/WEB-INF/tlds/mytld"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -32,7 +32,7 @@
                     </tr>
                     <tr>
                         <th>Date</th>
-                        <td><input name="time" value=""/></td>
+                        <td><input name="time" value="<mt:TagForDate format="yyyy-MM-dd"/>"/></td>
                     </tr>
                     <tr>
                         <th>Content</th>
