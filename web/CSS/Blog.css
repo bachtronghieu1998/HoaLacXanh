@@ -1,0 +1,66 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jun 15, 2018, 1:06:56 AM
+    Author     : hieu bach
+*/
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Dancing+Script|Lobster');
+@import url('https://fonts.googleapis.com/css?family=Alegreya:700|Open+Sans|Oswald|Roboto:900');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Montserrat');
+
+
+.blog1{
+    padding-top: 50px;
+    padding-bottom: 80px;
+    padding-left: 200px
+}
+
+.row1 div{
+    width: 392px;
+    margin-left: 60px;
+}
+
+.post img{
+    width: 390px;
+    height: 350px;
+}
+
+
+.post h3{
+    font-family: Oswald;
+    font-style: italic;
+}
+
+.row1 .post{
+    display: inline-block;
+}
+
+.row1{
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+
+.crop{
+    overflow: hidden;
+    white-space: nowrap; /* Don't forget this one */
+    text-overflow: ellipsis;
+}
+
+.blog_temp h1{
+    font-family: 'Dancing Script';
+    font-size: 80px;
+    
+}
+
+.blog_temp h4{
+   font-size: 40px;
+    font-family:'Dancing Script';
+    
+}
+
+
+

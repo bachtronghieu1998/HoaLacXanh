@@ -1,0 +1,79 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jun 10, 2018, 11:21:38 AM
+    Author     : hieu bach
+*/
+.sidenav{
+    height: 100% ;
+    width: 20%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    background-color: #111;
+    overflow-x:hidden;
+    overflow-y: hidden;
+    padding-top: 20px;
+    float: left;
+    
+        
+}
+
+.sidenav a{
+    padding: 25px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+}
+
+.sidenav a:hover{
+    color: #f1f1f1
+}
+
+.main{
+    padding-top: 40px;
+    margin-top: auto;
+        margin-left: auto;
+    width: 75%;
+    float: right;
+}
+
+.avatar{
+    position: relative;
+    width: 85px;
+    height: 85px;
+    vertical-align: middle;
+    border-radius: 50%;
+}
+
+
+.main th{
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
+
+.main td{
+   
+}
+.main table td input{
+   width: 100%;
+     box-sizing: border-box;
+     -webkit-box-sizing:border-box;
+     -moz-box-sizing: border-box;
+     padding: 22px;
+}
+
+.main table td textarea{
+   width: 100%;
+     box-sizing: border-box;
+     -webkit-box-sizing:border-box;
+     -moz-box-sizing: border-box;
+     padding: 23px;
+}
