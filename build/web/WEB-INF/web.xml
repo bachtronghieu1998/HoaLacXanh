@@ -5,24 +5,72 @@
         <servlet-class>AdController.ProductController</servlet-class>
     </servlet>
     <servlet>
+        <servlet-name>UProdController</servlet-name>
+        <servlet-class>UsController.UProdController</servlet-class>
+    </servlet>
+    <servlet>
         <servlet-name>AdminAddController</servlet-name>
         <servlet-class>AdController.AdminAddController</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>AddCart</servlet-name>
-        <servlet-class>UsController.AddCart</servlet-class>
+        <servlet-name>BlogServlet</servlet-name>
+        <servlet-class>AdminBlogServlet.BlogServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>BlogDelete</servlet-name>
+        <servlet-class>AdminBlogServlet.BlogDelete</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>BlogUpdate</servlet-name>
+        <servlet-class>AdminBlogServlet.BlogUpdate</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>BlogInsert</servlet-name>
+        <servlet-class>AdminBlogServlet.BlogInsert</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>BlogUpdateSetJSP</servlet-name>
+        <servlet-class>AdminBlogServlet.BlogUpdateSetJSP</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>BlogDetail</servlet-name>
+        <servlet-class>bean.BlogDetail</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BlogServlet</servlet-name>
+        <url-pattern>/BlogServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BlogDelete</servlet-name>
+        <url-pattern>/BlogDelete</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BlogInsert</servlet-name>
+        <url-pattern>/BlogInsert</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BlogUpdate</servlet-name>
+        <url-pattern>/BlogUpdate</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BlogUpdateSetJSP</servlet-name>
+        <url-pattern>/BlogUpdateSetJSP</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BlogDetail</servlet-name>
+        <url-pattern>/BlogDetail</url-pattern>
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>ProductController</servlet-name>
         <url-pattern>/ProductController</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>AdminAddController</servlet-name>
-        <url-pattern>/AdminAddController</url-pattern>
+        <servlet-name>UProdController</servlet-name>
+        <url-pattern>/UProdController</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>AddCart</servlet-name>
-        <url-pattern>/AddCart</url-pattern>
+        <servlet-name>AdminAddController</servlet-name>
+        <url-pattern>/AdminAddController</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
