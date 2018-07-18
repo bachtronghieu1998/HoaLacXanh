@@ -5,17 +5,34 @@
  */
 package entity;
 
-import static java.awt.SystemColor.text;
-
 /**
  *
- * @author This PC
+ * @author hieu bach
  */
 public class ProductOrder {
-    private int orderID;
+     private int orderID;
     private int productID;
+    private String productName;
     private int quantity;
     private double price;
+
+    public ProductOrder(int orderID, int productID, String productName, int quantity, double price) {
+        this.orderID = orderID;
+        this.productID = productID;
+        this.productName = productName;
+        this.quantity = quantity;
+        this.price = price;
+    }
+
+    public String getProductName() {
+        return productName;
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
+
+    
 
     public int getOrderID() {
         return orderID;
@@ -25,12 +42,7 @@ public class ProductOrder {
         this.orderID = orderID;
     }
 
-    public ProductOrder(int orderID, int productID, int quantity, double price) {
-        this.orderID = orderID;
-        this.productID = productID;
-        this.quantity = quantity;
-        this.price = price;
-    }
+  
     
     
     public ProductOrder()
@@ -61,6 +73,5 @@ public class ProductOrder {
         this.price = price;
     }
 
-    
     
 }

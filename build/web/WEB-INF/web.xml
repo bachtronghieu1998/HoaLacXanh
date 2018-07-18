@@ -13,16 +13,28 @@
         <servlet-class>UsController.AddCart</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>LoginController</servlet-name>
-        <servlet-class>AdminController.LoginController</servlet-class>
-    </servlet>
-    <servlet>
         <servlet-name>OrderController</servlet-name>
         <servlet-class>AdminController.OrderController</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>UpdatePSW</servlet-name>
         <servlet-class>AdController.UpdatePSW</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LoginController</servlet-name>
+        <servlet-class>AdminController.LoginController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>BlogInsert</servlet-name>
+        <servlet-class>AdminBlogServlet.BlogInsert</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>BlogDelete</servlet-name>
+        <servlet-class>AdminBlogServlet.BlogDelete</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>BlogUpdate</servlet-name>
+        <servlet-class>AdminBlogServlet.BlogUpdate</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>ProductController</servlet-name>
@@ -37,16 +49,28 @@
         <url-pattern>/AddCart</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>LoginController</servlet-name>
-        <url-pattern>/LoginController</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
         <servlet-name>OrderController</servlet-name>
         <url-pattern>/OrderController</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>UpdatePSW</servlet-name>
         <url-pattern>/UpdatePSW</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoginController</servlet-name>
+        <url-pattern>/LoginController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BlogInsert</servlet-name>
+        <url-pattern>/BlogInsert</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BlogDelete</servlet-name>
+        <url-pattern>/BlogDelete</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BlogUpdate</servlet-name>
+        <url-pattern>/BlogUpdate</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

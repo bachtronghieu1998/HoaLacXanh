@@ -3,13 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package AdminController;
+package AdminBlogServlet;
 
-import dal.LoginDAO;
-import entity.AdminAccount;
+import dal.BlogDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.ServletException;
@@ -21,7 +19,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author hieu bach
  */
-public class LoginController extends HttpServlet {
+public class BlogDelete extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -36,49 +34,13 @@ public class LoginController extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            String username = request.getParameter("username");
-            String password = request.getParameter("password");
-            LoginDAO dao = new LoginDAO();
-            List<AdminAccount> list = dao.selectAccount();
-            String error = "";
-            int checkTemp = 0;
-            int checkExited = 0;
-            for (int i = 0; i < list.size(); i++) {
-                if (username.equals(list.get(i).getUserName())) {
-                    checkExited = 1;
-                    if (!password.equals(list.get(i).getPassword())) {
-                        checkTemp = 1;
-                        error = "your password is not correct";
-                        break;
-                    }
-                }
-            }
-            System.out.println("checkTemp= " + checkTemp);
-            System.out.println("Error 1: " + error);
-            String url="";
-            if (checkTemp == 0) {
-                if (checkExited == 0) {
-                    error = "username not exists";
-                    url = "Admin/AdminLogin.jsp?error=" + error;
-                }else{
-                    request.getSession().setAttribute("username", username);
-                    request.getSession().setAttribute("psw", password);
-                   url = "Admin/AdminSanPham.jsp"; 
-                }
-            }else{
-                 url = "Admin/AdminLogin.jsp?error=" + error;
-            }
-//            
-//            String url = "";
-//            if (!check) {
-//                url = "Admin/AdminLogin.jsp?error=" + error;
-//            } else {
-//                url = "Admin/AdminSanPham.jsp";
-//            }
-            response.sendRedirect(url);
-
+            /* TODO output your page here. You may use following sample code. */
+            int id=Integer.valueOf(request.getParameter("blogID"));
+            BlogDAO dao=new BlogDAO();
+            dao.delete(id);
+            response.sendRedirect("Admin/AdminBlog.jsp");
         } catch (Exception ex) {
-            Logger.getLogger(LoginController.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(BlogDelete.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 

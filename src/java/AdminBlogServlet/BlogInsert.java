@@ -3,13 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package AdminController;
+package AdminBlogServlet;
 
-import dal.LoginDAO;
-import entity.AdminAccount;
+import dal.BlogDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.List;
+import java.net.URLEncoder;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.ServletException;
@@ -21,7 +20,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author hieu bach
  */
-public class LoginController extends HttpServlet {
+public class BlogInsert extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -34,51 +33,39 @@ public class LoginController extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
+       response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            String username = request.getParameter("username");
-            String password = request.getParameter("password");
-            LoginDAO dao = new LoginDAO();
-            List<AdminAccount> list = dao.selectAccount();
-            String error = "";
-            int checkTemp = 0;
-            int checkExited = 0;
-            for (int i = 0; i < list.size(); i++) {
-                if (username.equals(list.get(i).getUserName())) {
-                    checkExited = 1;
-                    if (!password.equals(list.get(i).getPassword())) {
-                        checkTemp = 1;
-                        error = "your password is not correct";
-                        break;
-                    }
-                }
+            /* TODO output your page here. You may use following sample code. */
+            request.setCharacterEncoding("UTF-8");
+            response.setCharacterEncoding("UTF-8");
+            String action=request.getParameter("insert");
+            if(action!=null){
+            String name=request.getParameter("name");
+            String content=request.getParameter("content");
+            String time=request.getParameter("time");
+            if(name.isEmpty()||content.isEmpty()||time.isEmpty())
+            {
+                String message = "Title/Date/Content can not be empty";
+                response.sendRedirect("Admin/InsertBlog.jsp?message=" + URLEncoder.encode(message, "UTF-8"));
             }
-            System.out.println("checkTemp= " + checkTemp);
-            System.out.println("Error 1: " + error);
-            String url="";
-            if (checkTemp == 0) {
-                if (checkExited == 0) {
-                    error = "username not exists";
-                    url = "Admin/AdminLogin.jsp?error=" + error;
-                }else{
-                    request.getSession().setAttribute("username", username);
-                    request.getSession().setAttribute("psw", password);
-                   url = "Admin/AdminSanPham.jsp"; 
-                }
-            }else{
-                 url = "Admin/AdminLogin.jsp?error=" + error;
+            else{
+            BlogDAO dao=new BlogDAO();
+            dao.add(name, content, time);}
+            response.sendRedirect("Admin/AdminBlog.jsp");
             }
-//            
-//            String url = "";
-//            if (!check) {
-//                url = "Admin/AdminLogin.jsp?error=" + error;
-//            } else {
-//                url = "Admin/AdminSanPham.jsp";
-//            }
-            response.sendRedirect(url);
-
+            String cancel=request.getParameter("cancel");
+            if(cancel!=null){
+                response.sendRedirect("Admin/AdminBlog.jsp");
+            }
+            
+            /*RequestDispatcher rd=request.getRequestDispatcher("AdminBlog.jsp");
+            rd.forward(request, response);*/
+           
         } catch (Exception ex) {
-            Logger.getLogger(LoginController.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(BlogInsert.class.getName()).log(Level.SEVERE, null, ex);
+            /*String message = "Validate error in Title/Date/Content";
+            response.sendRedirect("InsertBlog.jsp?message=" + URLEncoder.encode(message, "UTF-8"));*/
+            
         }
     }
 

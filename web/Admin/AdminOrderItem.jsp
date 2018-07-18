@@ -26,7 +26,8 @@
             <h1 style="text-align: left; padding-bottom: 20px">View Order Detail</h1>
             <table border="1 solid black" style="table-layout: fixed" >
                 <tr>
-                    <th style="padding: 40px">ProductName</th>
+                    <th style="padding: 40px">ProductID</th>
+                     <th style="padding: 40px">ProductName</th>
                     <th style="padding: 40px">Quantity</th>
                     <th style="padding: 40px">Price</th>
                 </tr>
@@ -36,6 +37,7 @@
                     <c:set var="total" value="${total + s.quantity}" />
                     <tr>
                         <td>${s.productID}</td>
+                        <td>${s.productName}</td>
                         <td>${s.quantity}</td>
                         <td>${s.price}</td>
                         

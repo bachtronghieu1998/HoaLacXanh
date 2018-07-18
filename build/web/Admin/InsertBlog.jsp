@@ -1,9 +1,13 @@
 <%-- 
     Document   : InsertBlog
-    Created on : Jun 10, 2018, 1:27:23 PM
+    Created on : Jul 19, 2018, 1:36:57 AM
     Author     : hieu bach
 --%>
 
+
+<%@page import="java.util.Date"%>
+<%@page import="java.text.SimpleDateFormat"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -17,32 +21,40 @@
     </head>
     <body>
         <jsp:include page="SideNav.jsp"></jsp:include>
-        <div class="main">
-            <h1 style="text-align: left;padding-bottom: 20px">Insert Blogs</h1>
-            <form>
-                <table border="1 solid black" cellspacing="0" style="align-content: center">
-                    <tr>
-                         <th>ID</th>
-                        <td><input value=""/></td>
-                    </tr>
-                    <tr>
-                        <th>Title</th>
-                        <td><input value=""/></td>
-                    </tr>
-                    <tr>
-                        <th>Date</th>
-                        <td><input value=""/></td>
+            <div class="main">
+                <h1 style="text-align: left;padding-bottom: 20px">Insert Blogs</h1>
+                <form action="../BlogInsert">
+                    <table border="1 solid black" cellspacing="0" style="align-content: center">
+                        <tr>
+                            <th>ID</th>
+                            <td><input value="" disabled=""/></td>
+                        </tr>
+                        <tr>
+                            <th>Title</th>
+                            <td><input name="name" value=""/></td>
+                        </tr>
+                        <tr>
+                            <th>Date</th>
+                            <%SimpleDateFormat formatter = new SimpleDateFormat("yyyy/MM/dd");
+                                Date date = new Date();
+                              String newDate= formatter.format(date);
+                            %>
+                            <td><input name="time" value="<%=newDate%>"/></td>
                     </tr>
                     <tr>
                         <th>Content</th>
-                        <td>​<textarea id="txtArea" rows="10" cols="70"></textarea></td>
+                        <td>​<textarea name="content" id="txtArea" rows="10" cols="70"></textarea></td>
                     </tr>
-                    
-                </table>
-                <input type="submit" value="Insert" style="margin-top: 20px;margin-bottom: 20px;padding: 10px"/> 
-                 <input type="submit" value="Cancel" style="margin-top: 20px;margin-bottom: 20px;padding: 10px"/> 
 
-               
+                </table>
+                <c:if test="${not empty param.message}">
+                    <h2>Message: ${param.message}</h2>
+                </c:if>
+
+                <input name="insert" type="submit" value="Insert" style="margin-top: 20px;margin-bottom: 20px;padding: 10px"/> 
+                <input name="cancel" type="submit" value="Cancel" style="margin-top: 20px;margin-bottom: 20px;padding: 10px"/> 
+
+
             </form>
         </div>
     </body>

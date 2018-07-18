@@ -4,11 +4,14 @@
     Author     : hieu bach
 --%>
 
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>        
         <title>JSP Page</title>
         <link href="../CSS/Ad_UpdateForm.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -17,30 +20,39 @@
     </head>
     <body>
         <jsp:include page="SideNav.jsp"></jsp:include>
+        <jsp:useBean id="blog" class="AdminBlogBean.BlogBean" scope="session"/>
+        <jsp:setProperty name="blog" property="id" value="${param.blogID}"/>
         <div class="main">
             <h1 style="text-align: left;padding-bottom: 20px">Update Blogs</h1>
-            <form>
+            <form action="../BlogUpdate" method="POST">
                 <table border="1 solid black" cellspacing="0" style="align-content: center">
+                <c:forEach var="b" items="${blog.selectByID()}">
                     <tr>
                          <th>ID</th>
-                        <td><input value="BG1"/></td>
+                         <td><input name="id1" value="${b.id}" readonly=""/></td>
                     </tr>
                     <tr>
                         <th>Title</th>
-                        <td><input value="Sen Đá Cỏ Ngọc"/></td>
+                        <td><input name="name" value="${b.name}"/></td>
+                    </tr>
+                     <tr>
+                        <th>Image</th>
+                        <td><input name="image" value="${b.image}"/></td>
                     </tr>
                     <tr>
                         <th>Date</th>
-                        <td><input value="20/10/2018"/></td>
+                        <td><input name="time" value="${b.time}"/></td>
                     </tr>
                     <tr>
                         <th>Content</th>
-                        <td>​<textarea id="txtArea" rows="10" cols="70">Sen Đá Cỏ Ngọc nay còn được gọi với một cái tên vô cùng duyên dáng ...</textarea></td>
+                        <td>​<textarea name="content" id="txtArea" rows="10" cols="70">${b.content}</textarea></td>
                     </tr>
+                </c:forEach>
+                    
                     
                 </table>
-                <input type="submit" value="Update" style="margin-top: 20px;margin-bottom: 20px;padding: 10px"/> 
-                 <input type="submit" value="Cancel" style="margin-top: 20px;margin-bottom: 20px;padding: 10px"/> 
+                    <input name="update" type="submit" value="Update" style="margin-top: 20px;margin-bottom: 20px;padding: 10px"/> 
+                    <input name="cancel" type="submit" value="Cancel" style="margin-top: 20px;margin-bottom: 20px;padding: 10px"/>
 
                
             </form>

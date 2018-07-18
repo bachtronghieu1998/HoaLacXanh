@@ -99,12 +99,13 @@ public class OrderBean {
             int orderID = rs.getInt(1);
             int productID = rs.getInt(2);
             int quantity = rs.getInt(3);
-
+            String name=rs.getString(5);
+            
             double price = rs.getDouble(6);
-            list.add(new ProductOrder(orderID,productID, quantity, price));
+            list.add(new ProductOrder(orderID, productID, name, quantity, price));
 
         }
-
+        
         rs.close();
         connection.close();
         return list;
