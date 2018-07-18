@@ -5,7 +5,6 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -14,21 +13,16 @@
         <link href="../CSS/Ad_Login.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-    <c:if test="${param.error != null}">
-            <script>
-                alert("${param.error}");
-            </script>
-        </c:if>
-        <form action="../LoginController">
+        <form>
             <h2>Login to Admin</h2>
             <table border="1 solid black"  cellspacing="0" class="center">
                 <tr>
                     <th>Admin ID</th>
-                    <td><input value="" name="username"></td>
+                    <td><input value=""></td>
                 </tr>
                 <tr>
-                    <th>Password</th>
-                    <td><input type="password" name="password" value=""></td>
+                    <th>PassWord</th>
+                    <td><input value=""></td>
                 </tr>
             </table>
             <br>
