@@ -28,7 +28,7 @@
     <body>
         <div id="header2"></div>
         <div id="menu"></div>
-        <form class="padd">
+        <form action="../AddCart" class="padd" >
             <table class="center">
                 <tr>
                     <td>
@@ -47,12 +47,19 @@
                         <h3>Description</h3>
                         <p>${param.content}</p>
                         <h3><span> Quantity </span></h3>
-                        <p><input type="number" style="width: 60px" value="1" min="0"/></p>
+                        <p><input name="quantity" type="number" style="width: 60px" value="1" min="0"/></p>
                         <p style="padding-top: 10px"><input type="submit" value="Add to cart" class="btn btn-danger"/></p>
                         
                     </td>
                 </tr>
             </table>
+                        <input type="hidden" name="action" value="add">
+                        <input type="hidden" name="pname" value="${param.pname}">
+                        <input type="hidden" name="pid" value="${param.pid}">
+                        <input type="hidden" name="price" value="${param.price}">
+                        <input type="hidden" name="imageName" value="${param.imageName}"/>
+<!--                        fix later-->
+                         
         </form>
         <div id="footer"></div>
     </body>

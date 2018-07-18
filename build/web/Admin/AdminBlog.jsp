@@ -4,61 +4,85 @@
     Author     : hieu bach
 --%>
 
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="Admin.css">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="Admin.css">
+        <link href="../CSS/Admin.css" rel="stylesheet" type="text/css"/>
+         <meta charset="UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <link href="../CSS/Admin.css" rel="stylesheet" type="text/css"/>
-    </head>
+</head>
 <body>
     <jsp:include page="SideNav.html"></jsp:include>
-      <jsp:useBean id="blog" class="AdminBlogBean.BlogBean" scope="session"/>
-        <jsp:setProperty name="blog" property="*"/>
+      
         <!--Load Data-->
         <div class="main">
             <h1 style="text-align: left; padding-bottom: 20px">View Blog</h1>
-            <form action="../BlogServlet">              
-                
             <table border="1 solid black" style="table-layout: fixed" >
                 <tr>
                     <th>ID</th>
-                    <th>Name</th>
-                    <th>Image</th>
+                    <th>Title</th>
                     <th>Content</th>
                     <th>Date</th>
                     <th colspan="2"></th>
                     
                 </tr>
                 <tr></tr>
-                <c:forEach var="b" items="${blog.selectAll()}">                
-                <tr>
-                    
-                    <td>${b.id}</td>
-                    <td>${b.name}</td>
-                    <td>${b.image}</td>
-                    <td>${b.content}</td>
-                    <td>${b.time}</td>
-                    <td><c:url var="Update" value="UpdateBlog.jsp">                                
-                                <c:param name="blogID" value="${b.id}"></c:param>                                                          
-                            </c:url>
-                        <a href="${Update}">Update</a></td>
-                    <td><c:url var="Delete" value="../BlogDelete">                                
-                                <c:param name="blogID" value="${b.id}"></c:param>
-                            </c:url>
-                            <a href="${Delete}"  onclick="return confirm('Delete confirmation?')">Delete</a></td>
-            </tr>
-            </c:forEach>                
+                 <tr>
+                        <td>BG1</td>
+                        <td>Sen Đá Cỏ Ngọc</td>
+                        <td><div class="crop">Sen Đá Cỏ Ngọc nay còn được gọi với một cái tên vô cùng duyên dáng ...</div></td>
+                        <td>20/10/2018</td>
+                        <td><a href="UpdateBlog.jsp">Update</a></td>
+                        <td><a href="#">Delete</a></td>
+                 </tr>
+                  <tr>
+                       <td>BG1</td>
+                        <td>Sen Đá Cỏ Ngọc</td>
+                        <td><div class="crop">Sen Đá Cỏ Ngọc nay còn được gọi với một cái tên vô cùng duyên dáng ...</div></td>
+                        <td>20/10/2018</td>
+                        <td><a href="UpdateBlog.jsp">Update</a></td>
+                        <td><a href="#">Delete</a></td>
+                 </tr>
+                 <tr>
+                       <td>BG1</td>
+                        <td>Sen Đá Cỏ Ngọc</td>
+                        <td><div class="crop">Sen Đá Cỏ Ngọc nay còn được gọi với một cái tên vô cùng duyên dáng ...</div></td>
+                        <td>20/10/2018</td>
+                        <td><a href="#">Update</a></td>
+                        <td><a href="#">Delete</a></td>
+                 </tr>
+                  <tr>
+                       <td>BG1</td>
+                        <td>Sen Đá Cỏ Ngọc</td>
+                        <td><div class="crop">Sen Đá Cỏ Ngọc nay còn được gọi với một cái tên vô cùng duyên dáng ...</div></td>
+                        <td>20/10/2018</td>
+                        <td><a href="#">Update</a></td>
+                        <td><a href="#">Delete</a></td>
+                 </tr>
+                  <tr>
+                        <td>BG1</td>
+                        <td>Sen Đá Cỏ Ngọc</td>
+                        <td><div class="crop">Sen Đá Cỏ Ngọc nay còn được gọi với một cái tên vô cùng duyên dáng ...</div></td>
+                        <td>20/10/2018</td>
+                        <td><a href="#">Update</a></td>
+                        <td><a href="#">Delete</a></td>
+                 </tr>
+                  <tr>
+                       <td>BG1</td>
+                        <td>Sen Đá Cỏ Ngọc</td>
+                        <td><div class="crop">Sen Đá Cỏ Ngọc nay còn được gọi với một cái tên vô cùng duyên dáng ...</div></td>
+                        <td>20/10/2018</td>
+                        <td><a href="#">Update</a></td>
+                        <td><a href="#">Delete</a></td>
+                 </tr>
             </table>
-            </form>
               <br>
-              <a href="InsertBlog.jsp"><input type="submit" value="Insert Blog"/></a>
+              <a href="InsertBlog.jsp"><input type="submit" value="Insert"/></a>
         </div>
 </body>
     
