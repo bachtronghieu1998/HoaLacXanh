@@ -19,7 +19,7 @@
     </head>
     <body>
         
-        <jsp:include page="SideNav.html"></jsp:include>
+        <jsp:include page="SideNav.jsp"></jsp:include>
         <jsp:useBean id="user" class="bean.UserBean"></jsp:useBean>
         <jsp:setProperty name="user" property="*"></jsp:setProperty>
         <c:if test="${not empty param.action &&param.action=='delete'}">

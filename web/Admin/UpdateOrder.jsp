@@ -17,7 +17,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
     <body>
-        <jsp:include page="SideNav.html"></jsp:include>
+        <jsp:include page="SideNav.jsp"></jsp:include>
         <jsp:useBean id="order" class="bean.OrderBean"></jsp:useBean>
         <jsp:setProperty name="order" property="*"></jsp:setProperty>
 

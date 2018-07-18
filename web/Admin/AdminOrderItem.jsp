@@ -18,7 +18,7 @@
         <link href="../CSS/Admin.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <jsp:include page="SideNav.html"></jsp:include>
+        <jsp:include page="SideNav.jsp"></jsp:include>
           <jsp:useBean id="order" class="bean.OrderBean"></jsp:useBean>
         <jsp:setProperty name="order" property="*"></jsp:setProperty>
         <!--Load Data-->

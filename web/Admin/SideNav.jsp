@@ -1,9 +1,11 @@
+<%-- 
+    Document   : SideNav
+    Created on : Jul 18, 2018, 4:33:28 PM
+    Author     : hieu bach
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
         <title>TODO supply a title</title>
@@ -17,12 +19,13 @@ and open the template in the editor.
         <link href="../CSS/SideNav.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
+        
          <div class="sidenav">
             <div class="row">
                 <div class="col-sm-4"> <img src="../images/cactus1.jpg" class="avatar"/></div>
                 <div class="col-sm-8" id="ava_name">
                     <h3>Hello</h3>
-                     <h3>HLX !!</h3>
+                    <h3>${sessionScope.username} !!</h3>
                 </div>
             </div>
             <a href="AdminSanPham.jsp" >Product</a>
@@ -36,3 +39,4 @@ and open the template in the editor.
         
     </body>
 </html>
+

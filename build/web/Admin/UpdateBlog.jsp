@@ -16,7 +16,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
     <body>
-        <jsp:include page="SideNav.html"></jsp:include>
+        <jsp:include page="SideNav.jsp"></jsp:include>
         <div class="main">
             <h1 style="text-align: left;padding-bottom: 20px">Update Blogs</h1>
             <form>

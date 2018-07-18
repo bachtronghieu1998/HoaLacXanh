@@ -3,13 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package AdminController;
+package AdController;
 
-import dal.LoginDAO;
-import entity.AdminAccount;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.ServletException;
@@ -21,7 +18,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author hieu bach
  */
-public class LoginController extends HttpServlet {
+public class UpdatePSW extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -34,35 +31,36 @@ public class LoginController extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-         boolean check=true;
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-           String username = request.getParameter("username");
-		String password = request.getParameter("password");
-		LoginDAO dao= new LoginDAO();
-		List<AdminAccount> list =  dao.selectAccount();
-               
-                for(int i=0; i<list.size();i++)
-                {
-                if(username.equals(list.get(i).getUserName())&&password.equals(list.get(i).getPassword()))
-                {
-                    request.getSession().setAttribute("username", username);
-                    request.getSession().setAttribute("psw", password);
-                    response.sendRedirect("Admin/AdminSanPham.jsp");
-                }
-                    else {
-			check=false;
-		}
-                    }
-                if(check==false){
-                    
-                    //request.setAttribute("error", "username not exists");
-                    response.sendRedirect("Admin/AdminLogin.jsp?error=username not exists");
-                }
-                    
-                
+            /* TODO output your page here. You may use following sample code. */
+            String oldPsw = request.getParameter("oldPsw");
+            String newPsw = request.getParameter("newPsw");
+            String cfPsw = request.getParameter("cfPsw");
+            String oldPswError="";
+            String psw = (String) request.getSession().getAttribute("psw");
+             String uname = (String) request.getSession().getAttribute("username");
+            if(!oldPsw.equals(psw)){
+                oldPswError="Old password is incorrect";
+            }
+            String passLengthError = "";
+            if (newPsw.replace(" ", "").length() < 6) {
+                passLengthError = "Pass length must >6";
+            }
+            String checkSameInput="";
+            if(!newPsw.equals(cfPsw)){
+                checkSameInput="New password and confirm password is not the same";
+            }
+             if (oldPswError.length() != 0 || passLengthError.length() != 0 || checkSameInput.length() != 0) {
+                String str = "Admin/ChangePassWord.jsp?oldPswError=" + oldPswError + "&passLengthError=" + passLengthError + "&sameInputError=" + checkSameInput;
+                response.sendRedirect(str);
+
+            } else {
+                new adminBean.AdminBean().UpdatePassWord(uname, newPsw);
+                response.sendRedirect("Admin/ChangePassWord.jsp?result=Add+successflul");
+            }
         } catch (Exception ex) {
-            Logger.getLogger(LoginController.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(UpdatePSW.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
