@@ -60,28 +60,28 @@ public final class AdminSanPham_jsp extends org.apache.jasper.runtime.HttpJspBas
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
-      out.write("\r\n");
-      out.write("\r\n");
-      out.write("\r\n");
-      out.write("\r\n");
-      out.write("<!DOCTYPE html>\r\n");
-      out.write("<html>\r\n");
-      out.write("    <head>\r\n");
-      out.write("        <link rel=\"stylesheet\" type=\"text/css\" href=\"Admin.css\">\r\n");
-      out.write("        <meta charset=\"UTF-8\">\r\n");
-      out.write("        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n");
-      out.write("        <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">\r\n");
-      out.write("        <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js\"></script>\r\n");
-      out.write("        <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>\r\n");
-      out.write("        <link href=\"../CSS/Admin.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n");
-      out.write("    </head>\r\n");
-      out.write("    <body>\r\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("<!DOCTYPE html>\n");
+      out.write("<html>\n");
+      out.write("    <head>\n");
+      out.write("        <link rel=\"stylesheet\" type=\"text/css\" href=\"Admin.css\">\n");
+      out.write("        <meta charset=\"UTF-8\">\n");
+      out.write("        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n");
+      out.write("        <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">\n");
+      out.write("        <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js\"></script>\n");
+      out.write("        <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>\n");
+      out.write("        <link href=\"../CSS/Admin.css\" rel=\"stylesheet\" type=\"text/css\"/>\n");
+      out.write("    </head>\n");
+      out.write("    <body>\n");
       out.write("        <h1>");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${test}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("</h1>\r\n");
+      out.write("</h1>\n");
       out.write("        ");
       org.apache.jasper.runtime.JspRuntimeLibrary.include(request, response, "SideNav.html", out, false);
-      out.write("\r\n");
+      out.write("\n");
       out.write("        ");
       adminBean.ProductBean product = null;
       synchronized (_jspx_page_context) {
@@ -91,39 +91,39 @@ public final class AdminSanPham_jsp extends org.apache.jasper.runtime.HttpJspBas
           _jspx_page_context.setAttribute("product", product, PageContext.PAGE_SCOPE);
         }
       }
-      out.write("\r\n");
+      out.write("\n");
       out.write("        ");
       org.apache.jasper.runtime.JspRuntimeLibrary.introspect(_jspx_page_context.findAttribute("product"), request);
-      out.write("\r\n");
+      out.write("\n");
       out.write("        ");
       if (_jspx_meth_c_if_0(_jspx_page_context))
         return;
-      out.write("\r\n");
-      out.write("            <!--Load Data-->\r\n");
-      out.write("            <div class=\"main\">\r\n");
-      out.write("                <h1 style=\"text-align: left; padding-bottom: 20px\">View Product</h1>\r\n");
-      out.write("                <table border=\"1 solid black\" style=\"table-layout: fixed\" >\r\n");
-      out.write("                    <tr>\r\n");
-      out.write("                        <th>ID</th>\r\n");
-      out.write("                        <th>Name</th>\r\n");
-      out.write("                        <th>Description</th>\r\n");
-      out.write("                        <th>Price</th>\r\n");
-      out.write("                        <th>Image Name</th>\r\n");
-      out.write("                        <th>Type</th>\r\n");
-      out.write("                        <th colspan=\"2\"></th>\r\n");
-      out.write("                    </tr>\r\n");
+      out.write("\n");
+      out.write("            <!--Load Data-->\n");
+      out.write("            <div class=\"main\">\n");
+      out.write("                <h1 style=\"text-align: left; padding-bottom: 20px\">View Product</h1>\n");
+      out.write("                <table border=\"1 solid black\" style=\"table-layout: fixed\" >\n");
+      out.write("                    <tr>\n");
+      out.write("                        <th>ID</th>\n");
+      out.write("                        <th>Name</th>\n");
+      out.write("                        <th>Description</th>\n");
+      out.write("                        <th>Price</th>\n");
+      out.write("                        <th>Image Name</th>\n");
+      out.write("                        <th>Type</th>\n");
+      out.write("                        <th colspan=\"2\"></th>\n");
+      out.write("                    </tr>\n");
       out.write("                ");
       if (_jspx_meth_c_forEach_0(_jspx_page_context))
         return;
-      out.write("\r\n");
-      out.write("            </table>\r\n");
-      out.write("            <br>\r\n");
-      out.write("            <a href=\"InsertProduct.jsp\"> <input type=\"submit\" value=\"Insert\"/></a>\r\n");
-      out.write("        </div>\r\n");
-      out.write("\r\n");
-      out.write("\r\n");
-      out.write("    </body>\r\n");
-      out.write("</html>\r\n");
+      out.write("\n");
+      out.write("            </table>\n");
+      out.write("            <br>\n");
+      out.write("            <a href=\"InsertProduct.jsp\"> <input type=\"submit\" value=\"Insert\"/></a>\n");
+      out.write("        </div>\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("    </body>\n");
+      out.write("</html>\n");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
         out = _jspx_out;
@@ -149,10 +149,10 @@ public final class AdminSanPham_jsp extends org.apache.jasper.runtime.HttpJspBas
     int _jspx_eval_c_if_0 = _jspx_th_c_if_0.doStartTag();
     if (_jspx_eval_c_if_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
       do {
-        out.write("\r\n");
+        out.write("\n");
         out.write("            ");
         out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${product.deleteProduct()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-        out.write("\r\n");
+        out.write("\n");
         out.write("        ");
         int evalDoAfterBody = _jspx_th_c_if_0.doAfterBody();
         if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
@@ -182,45 +182,45 @@ public final class AdminSanPham_jsp extends org.apache.jasper.runtime.HttpJspBas
       int _jspx_eval_c_forEach_0 = _jspx_th_c_forEach_0.doStartTag();
       if (_jspx_eval_c_forEach_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
         do {
-          out.write("\r\n");
-          out.write("                    <tr>\r\n");
+          out.write("\n");
+          out.write("                    <tr>\n");
           out.write("                        <td>");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${k.pid}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write("</td>\r\n");
+          out.write("</td>\n");
           out.write("                        <td>");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${k.pname}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write("</td>\r\n");
+          out.write("</td>\n");
           out.write("                        <td><div class=\"crop\">");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${k.content}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write("</div></td>\r\n");
+          out.write("</div></td>\n");
           out.write("                        <td>");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${k.price}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write("</td>\r\n");
+          out.write("</td>\n");
           out.write("                        <td>");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${k.imageName}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write("</td>\r\n");
+          out.write("</td>\n");
           out.write("                        <td>");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${k.typeName}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write("</td>  \r\n");
-          out.write("                        <td>\r\n");
+          out.write("</td>  \n");
+          out.write("                        <td>\n");
           out.write("                            ");
           if (_jspx_meth_c_url_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_0, _jspx_page_context, _jspx_push_body_count_c_forEach_0))
             return true;
-          out.write("\r\n");
+          out.write("\n");
           out.write("                            <a href=\"");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${updateProduct}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write("\">Update</a>\r\n");
-          out.write("                        </td>\r\n");
-          out.write("                        <td>\r\n");
+          out.write("\">Update</a>\n");
+          out.write("                        </td>\n");
+          out.write("                        <td>\n");
           out.write("                            ");
           if (_jspx_meth_c_url_1((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_0, _jspx_page_context, _jspx_push_body_count_c_forEach_0))
             return true;
-          out.write("\r\n");
+          out.write("\n");
           out.write("                            <a href=\"");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${delete}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write("\">Delete </a>\r\n");
-          out.write("                        </td>\r\n");
-          out.write("                    </tr>\r\n");
+          out.write("\">Delete </a>\n");
+          out.write("                        </td>\n");
+          out.write("                    </tr>\n");
           out.write("                ");
           int evalDoAfterBody = _jspx_th_c_forEach_0.doAfterBody();
           if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
@@ -260,35 +260,35 @@ public final class AdminSanPham_jsp extends org.apache.jasper.runtime.HttpJspBas
         _jspx_th_c_url_0.doInitBody();
       }
       do {
-        out.write("\r\n");
+        out.write("\n");
         out.write("                                ");
         if (_jspx_meth_c_param_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_url_0, _jspx_page_context, _jspx_push_body_count_c_forEach_0))
           return true;
-        out.write("\r\n");
+        out.write("\n");
         out.write("                                ");
         if (_jspx_meth_c_param_1((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_url_0, _jspx_page_context, _jspx_push_body_count_c_forEach_0))
           return true;
-        out.write("\r\n");
+        out.write("\n");
         out.write("                                ");
         if (_jspx_meth_c_param_2((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_url_0, _jspx_page_context, _jspx_push_body_count_c_forEach_0))
           return true;
-        out.write("\r\n");
+        out.write("\n");
         out.write("                                 ");
         if (_jspx_meth_c_param_3((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_url_0, _jspx_page_context, _jspx_push_body_count_c_forEach_0))
           return true;
-        out.write("\r\n");
+        out.write("\n");
         out.write("                                ");
         if (_jspx_meth_c_param_4((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_url_0, _jspx_page_context, _jspx_push_body_count_c_forEach_0))
           return true;
-        out.write("\r\n");
+        out.write("\n");
         out.write("                                ");
         if (_jspx_meth_c_param_5((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_url_0, _jspx_page_context, _jspx_push_body_count_c_forEach_0))
           return true;
-        out.write("\r\n");
+        out.write("\n");
         out.write("                                ");
         if (_jspx_meth_c_param_6((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_url_0, _jspx_page_context, _jspx_push_body_count_c_forEach_0))
           return true;
-        out.write("\r\n");
+        out.write("\n");
         out.write("                            ");
         int evalDoAfterBody = _jspx_th_c_url_0.doAfterBody();
         if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
@@ -458,15 +458,15 @@ public final class AdminSanPham_jsp extends org.apache.jasper.runtime.HttpJspBas
         _jspx_th_c_url_1.doInitBody();
       }
       do {
-        out.write("\r\n");
+        out.write("\n");
         out.write("                                ");
         if (_jspx_meth_c_param_7((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_url_1, _jspx_page_context, _jspx_push_body_count_c_forEach_0))
           return true;
-        out.write("\r\n");
+        out.write("\n");
         out.write("                                ");
         if (_jspx_meth_c_param_8((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_url_1, _jspx_page_context, _jspx_push_body_count_c_forEach_0))
           return true;
-        out.write("\r\n");
+        out.write("\n");
         out.write("                            ");
         int evalDoAfterBody = _jspx_th_c_url_1.doAfterBody();
         if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
