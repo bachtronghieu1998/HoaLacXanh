@@ -17,16 +17,7 @@ public class AdminBean {
     public void InsertAdmin(String adName, String pass) throws Exception {
         Connection conn = new DBContext().getConnection();
         String sql = "insert into AdminWebsite(username,password)\n"
-                + "values('" + adName + "','" + pass + "')";
-        conn.prepareStatement(sql).executeUpdate();
-        conn.close();
-    }
-
-    public void UpdatePassWord(String name, String newPsw) throws Exception {
-        Connection conn = new DBContext().getConnection();
-        String sql = "update AdminWebsite \n"
-                + "set password='"+newPsw+"'\n"
-                + "where username='"+name+"'";
+                + "values('"+adName+"','"+pass+"')";
         conn.prepareStatement(sql).executeUpdate();
         conn.close();
     }

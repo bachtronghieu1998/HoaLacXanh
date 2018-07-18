@@ -5,7 +5,6 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -28,78 +27,108 @@
         <div id="header2"></div>
         <div id="menu"></div>
 
-
-        <h1 style="text-align: center;padding-top: 50px">My Cart</h1>
-        <c:choose>
-            <c:when test="${empty sessionScope.Cart}">
-                <h3 style="padding: 20px;text-align: center">Your cart is empty</h3>
-            </c:when>
-            <c:otherwise>
-                <div class="cartItems">
-                    <div class="row line row_temp">
-                        <div class="font">
-                            <div class="col-sm-6">
-                                <p>MyCart (${sessionScope.Cart.items.size()})</p> 
-                            </div>
-                            <div class="col-sm-2">
-                                <p>Price</p>
-                            </div>
-                            <div class="col-sm-2">
-                                <p> Quantity</p>
-                            </div>
-                            <div class="col-sm-2">
-                                <p> Total</p>
-                            </div>  
+        <form>
+            <h1 style="text-align: center;padding-top: 50px">My Cart</h1>
+            <div class="cartItems">
+                <div class="row line row_temp">
+                    <div class="font">
+                        <div class="col-sm-6">
+                            <p>MyCart (3)</p> 
                         </div>
-                    </div>
-
-                    <c:forEach var="k" items="${sessionScope.Cart.items}">
-                        <!--       item 1-->
-                        <div class="row line row_temp">
-                            <div class="col-sm-6">
-                                <div class="row row_temp">
-                                    <div class="col-sm-4 col_temp">
-                                        <img src="../images/${k.imageName}"/>
-                                    </div>
-                                    <div class="col-sm-5">
-                                        <p>${k.productName}</p>
-                                        <p><a href="#">Remove</a></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-2 col_infor">
-                                ${k.price}
-                            </div>
-                            <div class="col-sm-2 col_infor">
-
-                                <form action="../AddCart"> 
-                                    <input type="hidden" name="action" value="update">
-                                    <input type="hidden" name="pname" value="${k.productName}">
-                                    <input type="hidden" name="pid" value="${k.pid}">
-                                    <input type="hidden" name="price" value="${k.price}">
-                                    <input type="hidden" name="imageName" value="${k.imageName}"/>
-                                    <p><input name="quantity" type="text" style="width: 60px" value="${k.quantity}" min="1"/></p>
-                                    <input type="submit" class="btn btn-primary" style="width: 70%;margin-top: 10px" value="Update">
-                                </form>
-                            </div>
-                            <div class="col-sm-2 col_infor">
-                                ${k.total}
-                            </div>   
-                        </div> 
-
-                    </c:forEach>
-
-                    <!--                Get total-->
-                    <div class="total">
-                        <h3>
-                            <span>Total:</span><span style="padding-left: 30px"> ${sessionScope.Cart.total}</span>  
-                        </h3>
-                        <p><input type="button" style="width: 70%;margin-top: 10px" class="btn btn-danger" value="Check Out"/></p>
+                        <div class="col-sm-2">
+                            <p>Price</p>
+                        </div>
+                        <div class="col-sm-2">
+                            <p> Quantity</p>
+                        </div>
+                        <div class="col-sm-2">
+                            <p> Total</p>
+                        </div>  
                     </div>
                 </div>
-            </c:otherwise>
-        </c:choose>    
 
+                <!--       item 1-->
+                <div class="row line row_temp">
+                    <div class="col-sm-6">
+                        <div class="row row_temp">
+                            <div class="col-sm-4 col_temp">
+                                <img src="../images/cactus2.jpg"/>
+                            </div>
+                            <div class="col-sm-5">
+                                <p>Cactus 1</p>
+                                <p><a href="#">Remove</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-2 col_infor">
+                        10000
+                    </div>
+                    <div class="col-sm-2 col_infor">
+                        <p><input type="number" style="width: 60px" value="1" min="0"/></p>
+                    </div>
+                    <div class="col-sm-2 col_infor">
+                        10000đ
+                    </div>   
+                </div>
+
+                <!--item 2-->
+                <div class="row line row_temp">
+                    <div class="col-sm-6">
+                        <div class="row row_temp">
+                            <div class="col-sm-4 col_temp">
+                                <img src="../images/cactus4.jpg"/>
+                            </div>
+                            <div class="col-sm-5">
+                                <p>Cactus 1</p>
+                                <p><a href="#">Remove</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-2 col_infor">
+                        10000
+                    </div>
+                    <div class="col-sm-2 col_infor">
+                        <p><input type="number" style="width: 60px" value="1" min="0"/></p>
+                    </div>
+                    <div class="col-sm-2 col_infor">
+                        10000đ
+                    </div>        
+                </div>
+
+                <!--item 3-->
+                <div class="row line row_temp">
+                    <div class="col-sm-6">
+                        <div class="row row_temp">
+                            <div class="col-sm-4 col_temp">
+                                <img src="../images/cactus6.jpg"/>
+                            </div>
+                            <div class="col-sm-5">
+                                <p>Cactus 1</p>
+                                <p><a href="#">Remove</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-2 col_infor">
+                        10000
+                    </div>
+                    <div class="col-sm-2 col_infor">
+                        <p><input type="number" style="width: 60px" value="1" min="0"/></p>
+                    </div>
+                    <div class="col-sm-2 col_infor">
+                        10000đ
+                    </div>  
+                </div>         
+
+                <!--                Get total-->
+                <div class="total">
+                    <h3>
+                        <span>Total:</span><span style="padding-left: 30px"> 30000đ</span>  
+                    </h3>
+                    <p><input type="button" style="width: 70%;margin-top: 10px" class="btn btn-danger" value="Check Out"/></p>
+                </div>
+
+            </div>
+        </form>
 
         <div id="footer"></div>
     </body>
