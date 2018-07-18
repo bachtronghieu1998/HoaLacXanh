@@ -17,10 +17,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
 /**
  *
- * @author This PC
+ * @author hieu bach
  */
 public class LoginController extends HttpServlet {
 
@@ -35,13 +34,12 @@ public class LoginController extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        boolean check=true;
+         boolean check=true;
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
            String username = request.getParameter("username");
 		String password = request.getParameter("password");
-              
-                System.out.println(password);
+                System.out.println("***************"+password);
 		LoginDAO dao= new LoginDAO();
 		List<AdminAccount> list =  dao.selectAccount();
                   
@@ -50,7 +48,7 @@ public class LoginController extends HttpServlet {
                 if(username.equals(list.get(i).getUserName())&&password.equals(list.get(i).getPassword()))
                 {
                   
-                    response.sendRedirect("Admin/SideNav.html");
+                    response.sendRedirect("Admin/AdminSanPham.jsp");
                 }
                     else {
 			check=false;

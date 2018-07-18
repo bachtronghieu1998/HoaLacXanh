@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -18,37 +19,31 @@
     </head>
     <body>
         <jsp:include page="SideNav.html"></jsp:include>
+          <jsp:useBean id="order" class="bean.OrderBean"></jsp:useBean>
+        <jsp:setProperty name="order" property="*"></jsp:setProperty>
         <!--Load Data-->
         <div class="main">
             <h1 style="text-align: left; padding-bottom: 20px">View Order Detail</h1>
             <table border="1 solid black" style="table-layout: fixed" >
                 <tr>
-                    <th style="padding: 40px">ProductID</th>
+                    <th style="padding: 40px">ProductName</th>
                     <th style="padding: 40px">Quantity</th>
                     <th style="padding: 40px">Price</th>
                 </tr>
-                <tr>
-                    <td>P1</td>
-                    <td>3</td>
-                     <td>10.000đ</td>
-                </tr>
-                <tr>
-                    <td>P2</td>
-                    <td>3</td>
-                    <td>10.000đ</td>
-                </tr>
-                <tr>
-                    <td>P3</td>
-                    <td>3</td>
-                    <td>10.000đ</td>
-                </tr>
-                <tr>
-                    <td>P4</td>
-                    <td>3</td>
-                     <td>10.000đ</td>
-                </tr>
+                <c:set var="total" value="${0}"/>
+            <c:forEach var="s" items="${order.sellectOrderDetail()}">
+                <c:if test="${param.orderID==s.orderID}" >
+                    <c:set var="total" value="${total + s.quantity}" />
+                    <tr>
+                        <td>${s.productID}</td>
+                        <td>${s.quantity}</td>
+                        <td>${s.price}</td>
+                        
+                    </tr>
+                </c:if>
+        </c:forEach>
             </table>
-            <h3>Total product: 4</h3>
+            <h3>Total product: ${total}</h3>
 
         </div>
     </body>
