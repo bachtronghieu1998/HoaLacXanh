@@ -19,7 +19,7 @@
     </head>
     <body>
         <h1>${test}</h1>
-        <jsp:include page="SideNav.jsp"></jsp:include>
+        <jsp:include page="SideNav.html"></jsp:include>
         <jsp:useBean id="product" class="adminBean.ProductBean"></jsp:useBean>
         <jsp:setProperty name="product" property="*"></jsp:setProperty>
         <c:if test="${not empty param.action &&param.action=='delete'}">
