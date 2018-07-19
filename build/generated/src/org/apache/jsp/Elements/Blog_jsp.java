@@ -102,7 +102,9 @@ public final class Blog_jsp extends org.apache.jasper.runtime.HttpJspBase
       org.apache.jasper.runtime.JspRuntimeLibrary.introspect(_jspx_page_context.findAttribute("b"), request);
       out.write("\r\n");
       out.write("        <div id=\"header2\"></div>\r\n");
-      out.write("        <div id=\"menu\"></div>\r\n");
+      out.write("         ");
+      org.apache.jasper.runtime.JspRuntimeLibrary.include(request, response, "menu.jsp", out, false);
+      out.write("\r\n");
       out.write("        <!--        Blog-->\r\n");
       out.write("        <div class=\"blog_temp\" style=\"padding-top: 50px\">\r\n");
       out.write("            <h1  style=\"text-align: center;\">My Blog</h1>\r\n");
@@ -167,14 +169,14 @@ public final class Blog_jsp extends org.apache.jasper.runtime.HttpJspBase
           out.write("                        \r\n");
           out.write("                        <a href=\"");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${Detail}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write("\"> <div class=\"post\" style=\"border: 1px solid black\">                        \r\n");
+          out.write("\"> \r\n");
+          out.write("                            <div class=\"post\" style=\"border: 1px solid black\">                        \r\n");
           out.write("                                <h5>");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${i.time}", java.lang.String.class, (PageContext)_jspx_page_context, null));
           out.write("</h5>\r\n");
           out.write("                                <h3>");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${i.name}", java.lang.String.class, (PageContext)_jspx_page_context, null));
           out.write("</h3>\r\n");
-          out.write("\r\n");
           out.write("                                <hr>\r\n");
           out.write("                            </div>\r\n");
           out.write("                        </a>                \r\n");

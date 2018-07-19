@@ -22,18 +22,20 @@
     <body>
         <jsp:include page="header.jsp"></jsp:include>
         <jsp:include page="menu.jsp"></jsp:include>
-            <form class="modal-content1">
+        <form class="modal-content1" action="../SignUp">
                 <h2 align="center">Sign Up</h2>
                 <label><b>User name</b></label><br/>
-                <input type="text" placeholder="Enter Username" name="su_uname" required/><br/>
+                <input type="text" placeholder="Enter Username" name="uname" required/> <span style="color: red">${param.exitedError}</span><br/>
                 <label><b>Address</b></label><br/>
                 <input type="text" placeholder="Enter Address" name="address" required/><br/>
                  <label><b>Phone</b></label><br/>
                  <input type="tel" placeholder="Enter Phone" name="phone" required/><br/>
-                <label><b>PassWord</b></label><br/>
-                <input type="password" placeholder="Enter PassWord" name="su_psw" required/><br/>
-                <label><b>Confirm PassWord</b></label><br/>
-                <input type="password" placeholder="Confirm PassWord" name="cf_psw" required/><br/>
+                 <label><b>Email</b></label><br/>
+                 <input type="text" placeholder="Enter Email" name="email" required/><br/>
+                 <label><b>PassWord</b></label><span style="color: red">${param.lengthError}</span><br/>
+                <input type="password" placeholder="Enter PassWord" name="psw" required/><br/>
+                <label><b>Confirm PassWord</b></label> <span style="color: red">${param.checkSameError}</span><br/>
+                <input type="password" placeholder="Confirm PassWord" name="cfpsw" required/><br/>
                 <p> By creating an account you agree to our <a>Terms & Privacy.</a></p>
                 <button type="submit" class="btn btn-success">Sign Up</button>
                 <br/>

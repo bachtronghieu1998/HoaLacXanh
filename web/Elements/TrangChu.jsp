@@ -4,6 +4,7 @@
     Author     : hieu bach
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -27,12 +28,21 @@
         </script>
     </head>
     <body>
-      
+        <c:if test="${not empty param.error}">
+            <script>
+                alert("${param.error}");
+            </script>
+        </c:if>
+         <c:if test="${param.addNew == 'success'}">
+            <script>
+                alert("Add successful");
+            </script>
+        </c:if>   
         <div id="header2"></div>
-        <div id="menu"></div>
+       <jsp:include page="menu.jsp"></jsp:include>
         <div id="cataloge"></div>
         <jsp:include page="NewArrival.jsp"></jsp:include>
-        <div id="blog"></div>
+         <jsp:include page="blogMain.jsp"></jsp:include>
         <div id="footer"></div>
     </body>
 </html>

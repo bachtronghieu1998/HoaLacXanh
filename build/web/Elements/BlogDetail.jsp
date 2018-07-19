@@ -30,7 +30,7 @@
         <jsp:useBean id="blog" class="bean.BeanBlogDetail"></jsp:useBean>
         <jsp:setProperty name="blog" property="*"></jsp:setProperty>
         <div id="header2"></div>
-        <div id="menu"></div>
+        <jsp:include page="menu.jsp"></jsp:include>
         <form>
         <c:forEach var="b" items="${blog.selectByID()}">
                 <div class="blog_detail" style="border: 1px solid #cccccc">

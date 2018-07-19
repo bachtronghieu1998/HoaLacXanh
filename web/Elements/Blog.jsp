@@ -30,7 +30,7 @@
         <jsp:useBean id="b" class="bean.BeanBlog" scope="session"/>
         <jsp:setProperty name="b" property="*"/>
         <div id="header2"></div>
-        <div id="menu"></div>
+         <jsp:include page="menu.jsp"></jsp:include>
         <!--        Blog-->
         <div class="blog_temp" style="padding-top: 50px">
             <h1  style="text-align: center;">My Blog</h1>
@@ -46,10 +46,10 @@
                         <c:url var="Detail" value="BlogDetail.jsp">                                
                             <c:param name="id" value="${i.id}"></c:param>                                                          
                         </c:url>                        
-                        <a href="${Detail}"> <div class="post" style="border: 1px solid black">                        
+                        <a href="${Detail}"> 
+                            <div class="post" style="border: 1px solid black">                        
                                 <h5>${i.time}</h5>
                                 <h3>${i.name}</h3>
-
                                 <hr>
                             </div>
                         </a>                

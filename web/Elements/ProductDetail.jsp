@@ -27,7 +27,7 @@
     </head>
     <body>
         <div id="header2"></div>
-        <div id="menu"></div>
+         <jsp:include page="menu.jsp"></jsp:include>
         <form action="../AddCart" class="padd" >
             <table class="center">
                 <tr>

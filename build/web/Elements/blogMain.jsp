@@ -1,9 +1,10 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+<%-- 
+    Document   : blogMain
+    Created on : Jul 20, 2018, 12:35:50 AM
+    Author     : hieu bach
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <html>
     <head>
         <title>TODO supply a title</title>
@@ -16,7 +17,7 @@ and open the template in the editor.
     </head>
     <body>
         <div class="blog">
-            <h1><i><a href="#" style="text-decoration: none;color: white">Read my blog</a></i></h1>
+            <h1><i><a href="Blog.jsp" style="text-decoration: none;color: white">Read my blog</a></i></h1>
         </div>
     </body>
 </html>

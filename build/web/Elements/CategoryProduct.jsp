@@ -28,7 +28,7 @@
     </head>
     <body>
         <div id="header2"></div>
-        <div id="menu"></div>
+         <jsp:include page="menu.jsp"></jsp:include>
 
         <div class="Category2">
             <a href="CategoryProduct.jsp?typeID=1" > 

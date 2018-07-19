@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -16,20 +17,31 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="../CSS/CSS_nav.css" rel="stylesheet" type="text/css"/>
-    </head>
+    </head> 
     <body>
         <nav class="nav-bar navbar-fixed-top" id="temp_menu">
             <a href="TrangChu.jsp">Home</a>
             <a  href="CategoryProduct.jsp?typeID=1">Shop</a>
             <a  href="Blog.jsp">Blog</a>
             <a  href="Cart.jsp" ><span class="glyphicon glyphicon-shopping-cart"></span></a>
-            <a  href="#" class="right" onclick="document.getElementById('login').style.display = 'block'"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+                <c:if test="${not empty sessionScope.uname }">             
+                <a class="right">Welcome ${sessionScope.uname}</span>  
+                </c:if>
+                <c:if test="${sessionScope.uname eq null}">
+                    <a  href="#" class="right" onclick="document.getElementById('login').style.display = 'block'"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+                </c:if>
         </nav>
-
+        <c:if test="${not empty sessionScope.error}">
+            <script>
+                window.onload = function () {
+                    document.getElementById('login').style.display = 'block';
+                };
+            </script>
+        </c:if>
         <!--        Modal-->
         <div id="login" class="modal">
             <span onclick="document.getElementById('login').style.display = 'none'" class="close">&times;</span>
-            <form class="modal-content animate">
+            <form class="modal-content animate" action="../ULoginController">
                 <h2 align="center">LOGIN</h2>
                 <div class="row">
                     <div class="col-sm-7">
@@ -49,7 +61,7 @@
                 </div>
             </form>
         </div>
-       
+
     </body>
 </html>
 

@@ -26,9 +26,17 @@
     </head>
     <body>
         <div id="header2"></div>
-        <div id="menu"></div>
-
-
+        <jsp:include page="menu.jsp"></jsp:include>
+        <c:if test="${param.exited == 'false'}">
+            <script>
+                alert("Please login first");
+            </script>
+        </c:if>
+        <c:if test="${param.orderStatus == 'success'}">
+            <script>
+                alert("Order successful");
+            </script>
+        </c:if>
         <h1 style="text-align: center;padding-top: 50px">My Cart</h1>
         <c:choose>
             <c:when test="${empty sessionScope.Cart}">
@@ -94,7 +102,19 @@
                         <h3>
                             <span>Total:</span><span style="padding-left: 30px"> ${sessionScope.Cart.total}</span>  
                         </h3>
-                        <p><input type="button" style="width: 70%;margin-top: 10px" class="btn btn-danger" value="Check Out"/></p>
+
+                        <c:if test="${empty sessionScope.uname}">
+                            <c:url var="k" value="Cart.jsp">
+                                <c:param name="exited" value="false"></c:param>
+                            </c:url>
+                            <p><a href="${k}"><input type="button" style="width: 70%;margin-top: 10px" class="btn btn-danger" value="Check Out"/></a></p>
+                        </c:if>
+                        <c:if test="${sessionScope.error eq ''}"> 
+                            <p><a href="../AddOrder"><input type="button" style="width: 70%;margin-top: 10px" class="btn btn-danger" value="Check Out"/></a></p>
+                        </c:if>
+
+
+
                     </div>
                 </div>
             </c:otherwise>

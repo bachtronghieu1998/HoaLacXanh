@@ -36,6 +36,18 @@
         <servlet-name>BlogUpdate</servlet-name>
         <servlet-class>AdminBlogServlet.BlogUpdate</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ULoginController</servlet-name>
+        <servlet-class>UsController.ULoginController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AddOrder</servlet-name>
+        <servlet-class>UsController.AddOrder</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SignUp</servlet-name>
+        <servlet-class>UsController.SignUp</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ProductController</servlet-name>
         <url-pattern>/ProductController</url-pattern>
@@ -71,6 +83,18 @@
     <servlet-mapping>
         <servlet-name>BlogUpdate</servlet-name>
         <url-pattern>/BlogUpdate</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ULoginController</servlet-name>
+        <url-pattern>/ULoginController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddOrder</servlet-name>
+        <url-pattern>/AddOrder</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SignUp</servlet-name>
+        <url-pattern>/SignUp</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
