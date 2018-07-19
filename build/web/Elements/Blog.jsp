@@ -46,7 +46,8 @@
                         <c:url var="Detail" value="BlogDetail.jsp">                                
                             <c:param name="id" value="${i.id}"></c:param>                                                          
                         </c:url>                        
-                        <a href="${Detail}"> <div class="post" style="border: 1px solid black">                        
+                        <a href="${Detail}"> <div class="post" style="border: 1px solid black; 
+                                                  background-image:  url(../images/blog_image.jpg);">                        
                                 <h5>${i.time}</h5>
                                 <h3>${i.name}</h3>
 

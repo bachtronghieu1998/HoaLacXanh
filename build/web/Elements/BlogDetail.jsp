@@ -37,7 +37,10 @@
                     <p style="float: right">Date: ${b.time}</p>
                     
                     <h1> ${b.name}</h1> 
-                    <p><img src="../images/${b.image}"/></p>
+                    <c:if test="${not empty b.image}">
+                        <p><img src="../images/${b.image}"/></p>
+                    </c:if>
+                    
                     <p>   
                         ${b.content}
                     </p>        

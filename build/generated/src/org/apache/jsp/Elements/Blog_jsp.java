@@ -167,7 +167,8 @@ public final class Blog_jsp extends org.apache.jasper.runtime.HttpJspBase
           out.write("                        \r\n");
           out.write("                        <a href=\"");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${Detail}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write("\"> <div class=\"post\" style=\"border: 1px solid black\">                        \r\n");
+          out.write("\"> <div class=\"post\" style=\"border: 1px solid black; \r\n");
+          out.write("                                                  background-image:  url(../images/blog_image.jpg);\">                        \r\n");
           out.write("                                <h5>");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${i.time}", java.lang.String.class, (PageContext)_jspx_page_context, null));
           out.write("</h5>\r\n");

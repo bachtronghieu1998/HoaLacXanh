@@ -19,8 +19,10 @@ and open the template in the editor.
 }
 
 .row1 div{
-    width: 392px;
+    width: 400px;
+    height: 150px;
     margin-left: 60px;
+    margin-top: 20px;
 }
 
 .post img{
@@ -35,7 +37,7 @@ and open the template in the editor.
 }
 
 .row1 .post{
-    display: inline-block;
+    display: inline-table;
 }
 
 .row1{
