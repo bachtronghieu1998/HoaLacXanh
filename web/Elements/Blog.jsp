@@ -47,7 +47,7 @@
                             <c:param name="id" value="${i.id}"></c:param>                                                          
                         </c:url>                        
                         <a href="${Detail}"> 
-                            <div class="post" style="border: 1px solid black">                        
+                            <div class="post" style="border: 1px solid black">
                                 <h5>${i.time}</h5>
                                 <h3>${i.name}</h3>
                                 <hr>

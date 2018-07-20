@@ -5,12 +5,11 @@
  */
 package UsController;
 
-import entity.User;
+import entity.Cart;
+import entity.CartItem;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -20,7 +19,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author hieu bach
  */
-public class ULoginController extends HttpServlet {
+public class DeleteCart extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -36,39 +35,18 @@ public class ULoginController extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            String uname = request.getParameter("uname");
-            String psw = request.getParameter("psw");
-            List<User> uls = new dal.UserDAO().selectAllUser();
-            int checkExited = 0;
-            int checkPsw = 0;
-            String error = "";
-            for (int i = 0; i < uls.size(); i++) {
-                if (uls.get(i).getName().equals(uname)) {
-                    checkExited = 1;
-                    if (uls.get(i).getPsw().equals(psw)) {
-                        checkPsw = 1;
-                    }
+          int id=Integer.parseInt(request.getParameter("id"));
+           Cart c = (Cart) request.getSession().getAttribute("Cart");
+            List<CartItem> items = c.getItems();
+            for(int i=0;i<items.size();i++){
+                if(items.get(i).getPid() == id){
+                    items.remove(i);
                 }
             }
-            String url = "";
-            if (checkExited == 0) {
-                error = "account is not exited";
-            } else {
-                if (checkPsw == 0) {
-                    error = "password is incorrect";
-                }
-            }
-            if (error.length() == 0) {
-                 request.getSession().setAttribute("uname", uname);
-                 request.getSession().setAttribute("psw",psw);
-                  url = "Elements/TrangChu.jsp?result=Success";
-                  response.sendRedirect(url);
-            } else {
-                url = "Elements/TrangChu.jsp?error=" + error;
-                response.sendRedirect(url);
-            }
-        } catch (Exception ex) {
-            Logger.getLogger(ULoginController.class.getName()).log(Level.SEVERE, null, ex);
+            c.setItems(items);
+            request.getSession().setAttribute("Cart", c);
+            response.sendRedirect("Elements/Cart.jsp?deleteStatus=success");
+            
         }
     }
 

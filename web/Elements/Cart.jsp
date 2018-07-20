@@ -27,16 +27,7 @@
     <body>
         <div id="header2"></div>
         <jsp:include page="menu.jsp"></jsp:include>
-        <c:if test="${param.exited == 'false'}">
-            <script>
-                alert("Please login first");
-            </script>
-        </c:if>
-        <c:if test="${param.orderStatus == 'success'}">
-            <script>
-                alert("Order successful");
-            </script>
-        </c:if>
+       
         <h1 style="text-align: center;padding-top: 50px">My Cart</h1>
         <c:choose>
             <c:when test="${empty sessionScope.Cart}">
@@ -71,7 +62,7 @@
                                     </div>
                                     <div class="col-sm-5">
                                         <p>${k.productName}</p>
-                                        <p><a href="#">Remove</a></p>
+                                        <p><a href="../DeleteCart?id=${k.pid}">Remove</a></p>
                                     </div>
                                 </div>
                             </div>
@@ -118,8 +109,23 @@
                     </div>
                 </div>
             </c:otherwise>
-        </c:choose>    
-
+        </c:choose>
+         <c:if test="${param.exited == 'false'}">
+            <script>
+                alert("Please login first");
+            </script>
+        </c:if>
+        <c:if test="${param.orderStatus == 'success'}">
+            <script>
+                alert("Order successful");
+            </script>
+        </c:if>        
+                
+        <c:if test="${param.deleteStatus == 'success'}">
+            <script>
+                alert("Delete successful");
+            </script>
+        </c:if>
 
         <div id="footer"></div>
     </body>

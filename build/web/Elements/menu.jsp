@@ -24,14 +24,15 @@
             <a  href="CategoryProduct.jsp?typeID=1">Shop</a>
             <a  href="Blog.jsp">Blog</a>
             <a  href="Cart.jsp" ><span class="glyphicon glyphicon-shopping-cart"></span></a>
-                <c:if test="${not empty sessionScope.uname }">             
-                <a class="right">Welcome ${sessionScope.uname}</span>  
-                </c:if>
-                <c:if test="${sessionScope.uname eq null}">
-                    <a  href="#" class="right" onclick="document.getElementById('login').style.display = 'block'"><span class="glyphicon glyphicon-log-in"></span> Login</a>
-                </c:if>
+                <c:if test="${not empty sessionScope.uname }">  
+                <a href="../Logout" class="right"><span class="glyphicon glyphicon-log-out"></span> Logout</a>
+                <a class="right">Welcome ${sessionScope.uname} </a>  
+            </c:if>
+            <c:if test="${sessionScope.uname eq null}">
+                <a  href="#" class="right" onclick="document.getElementById('login').style.display = 'block'"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+            </c:if>
         </nav>
-        <c:if test="${not empty sessionScope.error}">
+        <c:if test="${param.error eq 'account is not exited' || param.error eq 'password is incorrect'}">
             <script>
                 window.onload = function () {
                     document.getElementById('login').style.display = 'block';
