@@ -33,8 +33,6 @@
                 </tr>
                 <c:set var="total" value="${0}"/>
             <c:forEach var="s" items="${order.sellectOrderDetail()}">
-                <c:if test="${param.orderID==s.orderID}" >
-                    <c:set var="total" value="${total + s.quantity}" />
                     <tr>
                         <td>${s.productID}</td>
                         <td>${s.productName}</td>
@@ -42,10 +40,9 @@
                         <td>${s.price}</td>
                         
                     </tr>
-                </c:if>
         </c:forEach>
             </table>
-            <h3>Total product: ${total}</h3>
+            <h3>Total product: ${order.sellectOrderDetail().size()}</h3>
 
         </div>
     </body>

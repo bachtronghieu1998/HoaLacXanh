@@ -18,6 +18,10 @@ public class Order {
     private int statusID;
     private String statusName;
 
+    public String getName() throws Exception{
+        return new dal.UserDAO().getName(userID);
+    }
+    
     public Order(int orderID, int userID, Date time, int statusID, String statusName) {
         this.orderID = orderID;
         this.userID = userID;

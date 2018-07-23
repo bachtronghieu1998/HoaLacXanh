@@ -66,9 +66,9 @@ public class OrderBean {
         conn.prepareStatement(query).executeUpdate();
         conn.close();
     }
-   public List<Status> selectStatus() throws Exception
-   {
-       List<Status> listStt = new ArrayList<>();
+
+    public List<Status> selectStatus() throws Exception {
+        List<Status> listStt = new ArrayList<>();
 
         String query = "select * from StatusOrder ";
         Connection connection = new DBContext().getConnection();
@@ -78,7 +78,7 @@ public class OrderBean {
         while (rs.next()) {
             int statusID = rs.getInt(1);
             String statusName = rs.getString(2);
-            
+
             listStt.add(new Status(statusID, statusName));
 
         }
@@ -86,26 +86,26 @@ public class OrderBean {
         rs.close();
         connection.close();
         return listStt;
-   }
+    }
+
     public List<ProductOrder> sellectOrderDetail() throws SQLException, Exception {
         List<ProductOrder> list = new ArrayList<>();
-        String sql = "Select * from OrderItemHistory a\n"
-                + "	left join Product b ON a.productID=b.productID";
+        String sql = "select p.productID,p.name,pre.quantity,p.price from\n"
+                + "(select * from OrderItemHistory where orderID="+orderID+") pre\n"
+                + "inner join Product p on p.productID=pre.productID";
         Connection connection = new DBContext().getConnection();
         PreparedStatement ps = connection.prepareCall(sql);
         ResultSet rs = ps.executeQuery();
 
         while (rs.next()) {
-            int orderID = rs.getInt(1);
-            int productID = rs.getInt(2);
-            int quantity = rs.getInt(3);
-            String name=rs.getString(5);
-            
-            double price = rs.getDouble(6);
-            list.add(new ProductOrder(orderID, productID, name, quantity, price));
+            int pid=rs.getInt(1);
+            String name=rs.getString(2);
+            int quantity=rs.getInt(3);
+            double price = rs.getDouble(4);   
+            list.add(new ProductOrder(pid, name, quantity, price));
 
         }
-        
+
         rs.close();
         connection.close();
         return list;

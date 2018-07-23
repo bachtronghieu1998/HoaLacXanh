@@ -28,7 +28,7 @@
                 <table border="1 solid black" style="table-layout: fixed" >
                     <tr>
                         <th>OrderID</th>
-                        <th>UserID</th>
+                        <th>User Name</th>
                         <th>Date</th>
                         <th>Status</th>
                         <th colspan="2"></th>
@@ -41,7 +41,7 @@
                             </c:url>
                             <a href="${orderDetails}">${s.orderID}</a>
                         </td>
-                        <td>${s.userID}</td>
+                        <td>${s.name}</td>
                         <td>${s.time}</td>
                         <td>${s.statusName}</td>
 

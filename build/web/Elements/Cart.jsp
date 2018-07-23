@@ -100,7 +100,7 @@
                             </c:url>
                             <p><a href="${k}"><input type="button" style="width: 70%;margin-top: 10px" class="btn btn-danger" value="Check Out"/></a></p>
                         </c:if>
-                        <c:if test="${sessionScope.error eq ''}"> 
+                         <c:if test="${not empty sessionScope.uname}"> 
                             <p><a href="../AddOrder"><input type="button" style="width: 70%;margin-top: 10px" class="btn btn-danger" value="Check Out"/></a></p>
                         </c:if>
 

@@ -24,6 +24,17 @@ public class ProductOrder {
         this.price = price;
     }
 
+    public ProductOrder(int productID, String productName, int quantity, double price) {
+        this.productID = productID;
+        this.productName = productName;
+        this.quantity = quantity;
+        this.price = price;
+    }
+
+  
+    
+    
+
     public String getProductName() {
         return productName;
     }

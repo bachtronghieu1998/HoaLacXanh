@@ -96,7 +96,7 @@ public final class AdminOrder_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                <table border=\"1 solid black\" style=\"table-layout: fixed\" >\r\n");
       out.write("                    <tr>\r\n");
       out.write("                        <th>OrderID</th>\r\n");
-      out.write("                        <th>UserID</th>\r\n");
+      out.write("                        <th>User Name</th>\r\n");
       out.write("                        <th>Date</th>\r\n");
       out.write("                        <th>Status</th>\r\n");
       out.write("                        <th colspan=\"2\"></th>\r\n");
@@ -158,7 +158,7 @@ public final class AdminOrder_jsp extends org.apache.jasper.runtime.HttpJspBase
           out.write("</a>\r\n");
           out.write("                        </td>\r\n");
           out.write("                        <td>");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${s.userID}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${s.name}", java.lang.String.class, (PageContext)_jspx_page_context, null));
           out.write("</td>\r\n");
           out.write("                        <td>");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${s.time}", java.lang.String.class, (PageContext)_jspx_page_context, null));

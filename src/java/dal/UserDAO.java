@@ -38,4 +38,15 @@ public class UserDAO {
         conn.prepareStatement(sql).executeUpdate();
         conn.close();
    }
+   
+   public String getName(int userID) throws Exception{
+        Connection conn = new DBContext().getConnection();
+        String query="select name from UserWebsite where userID ="+userID;
+        ResultSet rs = conn.prepareStatement(query).executeQuery();
+        String name="";
+        while(rs.next()){
+           name= rs.getString(1);
+        }
+        return name;
+   }
 }
